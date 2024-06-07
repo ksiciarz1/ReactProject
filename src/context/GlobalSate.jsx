@@ -1,10 +1,10 @@
 import React, { createContext, useReducer } from "react";
 import AppReducer from './AppReducer';
 
-// Initial State
+// Stan początkowy
 const initialState = {
     transactions: [
-        // Przykładowe tranzakcje do testów
+        // // Przykładowe tranzakcje do testów
         // { id: 1, text: 'Kwiaty', amount: -20 },
         // { id: 2, text: 'Wypłata', amount: 400 },
         // { id: 3, text: 'Księgarnia', amount: -10 },

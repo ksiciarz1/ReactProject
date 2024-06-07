@@ -1,4 +1,4 @@
-// Dodawanie oraz Usuwanie transakcji w liście
+// Logika dodawania oraz usuwania transakcji w liście
 export default (state, action) => {
     switch (action.type) {
         case 'DELETE_TRANSACTION':

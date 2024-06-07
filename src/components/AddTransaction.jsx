@@ -8,12 +8,13 @@ export const AddTransaction = () => {
     const { addTransaction } = useContext(GlobalContext);
 
     const onSubmit = e => {
-        e.preventDefault(); // Strona się nie odświerza
+        e.preventDefault(); // Żeby strona się nie odświerzała
 
+        // Tworzy nową transakcję
         const newTransaction = {
             id: Math.floor(Math.random() * 100000000), // Randomowe ID transakcji
             text,
-            amount: +amount
+            amount: +amount // Szybki cast to int
         }
 
         addTransaction(newTransaction)
@@ -29,10 +30,10 @@ export const AddTransaction = () => {
                 </div>
                 <div className="form-control">
                     <label htmlFor="amount"
-                    >Ilość <br />
+                    >Wartość <br />
                         (ujemna - wydatek, dodatnia - przychód)</label
                     >
-                    <input type="number" value={amount} onChange={e => setAmount(e.target.value)} placeholder="Wprowadź nazwę" />
+                    <input type="number" value={amount} onChange={e => setAmount(e.target.value)} placeholder="Wprowadź kwotę" />
                 </div>
                 <button className="btn">Dodaj transakcja</button>
             </form>

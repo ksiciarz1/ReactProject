@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../context/GlobalSate'
 
+// Pojedyńcza transakcja
 export const Transaction = ({ transaction }) => {
     const { deleteTransation } = useContext(GlobalContext);
     return (
